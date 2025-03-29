@@ -3,7 +3,9 @@ import { HomeComponent } from '../pages/home/home.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { LoginComponent } from '../components/login/login.component';
 import { RoomsComponent } from '../pages/admin/rooms/rooms.component';
-import { RoomslistComponent } from '../pages/roomslist/roomslist.component';
+import { RoomslistComponent } from '../pages/client/roomslist/roomslist.component';
+import { BuscadorComponent } from '../pages/client/buscador/buscador.component';
+
 
 
 
@@ -14,5 +16,6 @@ export const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'rooms', component: RoomsComponent},
   {path: 'roomslist', component: RoomslistComponent},
+  {path: 'scrape', component: BuscadorComponent},
   { path: '**', redirectTo: 'Home' }
 ];
