@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="container">
+  <h2 class="text-center">Lista de Habitaciones</h2>
+
+  <!-- Tarjetas de habitaciones -->
+  <div class="grid">
+    <div *ngFor="let room of rooms" class="column">
+      <div class="card2">
+        <img *ngIf="room.image" [src]="'data:image/png;base64,' + room.image" class="card-img-top" alt="{{ room.name }}">
+        <div class="card-body">
+          <h3 class="card-title">{{ room.name_room }}</h3>
+          <b> Ubicacion de la habitación: </b> <p> {{room.floor}} Piso </p>
+          <b> Descripción: </b><p class="card-text">{{ room.description }}</p>
+          <b> Estado de la Habitacion: </b> <p>{{room.status_room}}</p>
+          <br>
+          <br>
+          <button class="btn btn-primary" (click)="handleChat(room)">Preguntar al Chatbot</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Modal de Chat -->
+ <div class="modal" tabindex="-1" [class.show]="showChat" *ngIf="showChat">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Preguntar sobre {{ selectedRoom?.name_room }}</h5>
+        <button type="button" class="btn-close" (click)="closeChat()"></button>
+      </div>
+      <div class="modal-body">
+        <input
+        [value]="pregunta"
+        (input)="onInputChange($event)"
+        type="text"
+        class="form-control"
+        placeholder="Ingrese su pregunta"
+      />
+        <button class="btn btn-primary mt-2" (click)="enviarPregunta()">Enviar</button>
+        <p class="mt-3" *ngIf="respuesta">
+          <strong>Chatbot:</strong> {{ respuesta }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+

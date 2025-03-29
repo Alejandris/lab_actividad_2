@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+  }
+
+
+  .header {
+    background-image: url(../../assets/img/Group\ 17.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%;
+    height: 50vh;
+    z-index: -1;
+  }
+  .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items:center;
+    flex-direction:column;
+    width: 500px;
+    padding-top: 15%;
+
+    
+  }
+  .logo{
+    width: 500px;
+    height: 100px;
+    padding-left: 1%;
+  }
+  .title3{
+    font-size: 2.3em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #2887f588;
+  }
+
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background: #D3B897;
+    padding: 20px;
+    border: 5px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto; /* Deja que la altura del header se ajuste al contenido */
+    }
+
+    .hero {
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .logo {
+        width: 80%;
+        height: auto;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu a {
+        font-size: 1em;
+    }
+}
+
+/* Media Query para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        height: 40vh;
+    }
+
+    .hero {
+        width: 80%;
+        padding-top: 10%;
+    }
+
+    .logo {
+        width: 40%;
+        height: auto;
+    }
+
+    .menu {
+        gap: 5px;
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+    }
+    .title3{
+        font-size: 1.5em;
+        padding-top :15px;
+        background-color: #197ef100;
+    }
+}

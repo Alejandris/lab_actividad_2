@@ -1,0 +1,70 @@
+<app-header-admin></app-header-admin>
+<h2>Lista de Habitaciones</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Piso</th>
+      <th>Descripción</th>
+      <th>Estado</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Se muestran las habitaciones cargadas -->
+    <tr *ngFor="let room of rooms">
+      <td>{{ room.id_room }}</td>
+      <td>{{ room.name_room }}</td>
+      <td>{{ room.id_type_room }}</td>
+      <td>{{ room.floor }}</td>
+      <td>{{ room.description }}</td>
+      <td>{{ room.status_room }}</td>
+      <td>
+        <img *ngIf="room.image" [src]="'data:image/jpeg;base64,' + room.image" alt="Room Image" width="100">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Agregar Nueva Habitación</h3>
+<form (submit)="onSubmit($event)">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" #name />
+    </div>
+    
+    <div>
+      <label for="type">Tipo:</label>
+      <input type="number" id="type" #type />
+    </div>
+    
+    <div>
+      <label for="floor">Piso:</label>
+      <input type="number" id="floor" #floor />
+    </div>
+    <div>
+      <label for="description"> Descripción</label>
+      <input type="longtext" id="description" #description/>
+    </div>
+    <div>
+      <label for="status">Estado:</label>
+      <input type="text" id="status" #status />
+    </div>
+  
+    <!-- Campo para seleccionar la imagen -->
+    <div>
+      <label for="image">Imagen:</label>
+      <input type="file" id="image" (change)="handleFileChange($event)" accept="image/*" />
+    </div>
+  
+    <!-- Vista previa de la imagen seleccionada -->
+    <div *ngIf="newRoom.image">
+      <h3>Vista previa de la imagen:</h3>
+      <img [src]="'data:image/jpeg;base64,' + newRoom.image" alt="Vista previa" style="width: 100px; height: 100px; object-fit: cover;" />
+    </div>
+  
+    <button type="submit">Agregar</button>
+  </form>
+  

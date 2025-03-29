@@ -1,0 +1,38 @@
+.cards-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  padding: 30px !important;
+}
+
+.card {
+  border: 1px solid #ccc !important;
+  padding: 25px !important;
+  text-align: center !important;
+  background: white !important;
+}
+
+.card img {
+  width: 100% !important;
+  height: 190px !important;
+  object-fit: cover !important;
+  border-radius: 5px !important;
+}
+
+.card h3 {
+  padding: 15px !important;
+}
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr) !important; /* Dos columnas en tabletas */
+    padding: 20px !important;
+  }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr !important; /* Una columna en móviles */
+    padding: 15px !important;
+  }
+}

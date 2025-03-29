@@ -1,0 +1,76 @@
+/* Estilos para el cuerpo */
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Encabezados */
+  h2, h3 {
+    color: #000000; /* Azul fuerte */
+    text-align: center;
+  }
+  
+  /* Tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    border: 1px solid #002366; /* Azul fuerte */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #459ce4; /* Dorado */
+    color: #002366; /* Azul fuerte */
+  }
+  
+  td {
+    background-color: #f0f8ff; /* Azul claro */
+    color: #002366; /* Azul fuerte */
+  }
+  
+  /* Formulario */
+  form {
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    border: 2px solid #003e77; /* Dorado */
+    background-color: #d8c892; /* Fondo blanco */
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #002366; /* Azul fuerte */
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #002366; /* Azul fuerte */
+    border-radius: 5px;
+  }
+  
+  /* Botones */
+  button {
+    background-color: #1815bb; /* Dorado */
+    color: #ffffff; /* Blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #002366; /* Azul fuerte */
+    color: #ffffff; /* Blanco */
+  }
+  

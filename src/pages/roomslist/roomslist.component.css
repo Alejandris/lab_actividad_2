@@ -1,0 +1,41 @@
+.container{
+  margin: 0%;
+  padding: 0%;
+
+}
+.text-center{
+  text-align: center;
+}
+.grid{
+  width: 99.5%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid: gap 2px; ;
+  background-color: #0a6aca;
+  border: #000000 1px solid;
+}
+.card2{
+  
+  border: #000000 1px solid;
+  background-color: #f8f9fa;
+  border-radius: 2%;
+
+}
+.card-img-top{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  
+}
+.column{
+  width: 550px;
+  height: 500px;
+  margin: 15px;
+  padding: 10px;
+  
+}
+.card-body{
+  padding: 20px;
+}

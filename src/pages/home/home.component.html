@@ -1,0 +1,46 @@
+<app-header 
+  (registerClicked)="openModal()" 
+  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
+</app-header>
+<app-register [isModalVisible]="isModalVisible"></app-register>
+<app-login [isModalVisible]="isLoginModalVisible"></app-login>
+<div class="cards-container">
+    <div class="card">
+      <img src="assets/img/gran-salon.jpg" alt="{{ 'cards.grand_hall' | translate }}">
+      <h3>{{ 'cards.grand_hall' | translate }}</h3>
+      <a href="#">{{ 'cards.see_more' | translate }}</a>
+    </div>
+    <div class="card">
+        <img src="assets/img/restaurantes.jpg" alt="{{ 'cards.restaurants' | translate }}">
+        <h3>{{ 'cards.restaurants' | translate }}</h3>
+        <a href="#">{{ 'cards.see_more' | translate }}</a>
+      </div>
+  
+    <div class="card">
+      <img src="assets/img/suite-presidencial.jpg" alt="{{ 'cards.presidential_suite' | translate }}">
+      <h3>{{ 'cards.presidential_suite' | translate }}</h3>
+      <a href="#">{{ 'cards.see_more' | translate }}</a>
+    </div>
+        
+    <div class="card">
+        <img src="assets/img/actividades-turisticas.jpg" alt="{{ 'cards.tourist_activities' | translate }}">
+        <h3>{{ 'cards.tourist_activities' | translate }}</h3>
+        <a href="#">{{ 'cards.see_more' | translate }}</a>
+      </div>
+
+
+    <div class="card">
+        <img src="assets/img/eventos.jpg" alt="{{ 'cards.events' | translate }}">
+        <h3>{{ 'cards.events' | translate }}</h3>
+        <a href="#">{{ 'cards.see_more' | translate }}</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/habitacion-doble.jpg" alt="{{ 'cards.double_room' | translate }}">
+        <h3>{{ 'cards.double_room' | translate }}</h3>
+        <a href="#">{{ 'cards.see_more' | translate }}</a>
+      </div>
+  
+
+  </div>
+<app-footer></app-footer>
