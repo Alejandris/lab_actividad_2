@@ -1,5 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+styles.css
 body{
-    padding: 0;
-    margin:0;
-}   
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    font-size: 16px;
+}
+body.small-font {
+  font-size: 0.75rem; /* Fuente más pequeña */
+}
+
+body.normal-font {
+  font-size: 1rem; /* Fuente normal */
+}
+
+body.large-font {
+  font-size: 1.5rem; /* Fuente grande */
+}
+
+
+/* .accessibility-controls {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  z-index: 1;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 25px;
+}
+  
+.accessibility-controls button {
+  background-color: #D3B897;
+  border: none;
+  cursor: pointer;
+  padding: 25%;
+  margin: 25%;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 27px;
+}
+
+.accessibility-controls button:hover {
+  background-color: #ddd;
+} */
+  /* Estilos generales */
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* Contraste alto */
+body.high-contrast {
+  background-color: black;
+
+}
+.high-contrast h1 {
+  color: white;
+}
+body.high-contrast .title2 {
+  background-color: rgba(44, 73, 117, 0.082);
+  color: white;
+}
+body.high-contrast .search-bar input,
+body.high-contrast .search-bar button {
+  background-color: #0b223d;
+  color: rgb(255, 255, 255);
+}
+
+
+.high-contrast .menu .ah{
+  color: white;
+}
+body.high-contrast .menu {
+  background: #0b223d;
+  color: white;
+}
+.high-contrast .language-selector select option {
+  background-color: #0b223d;
+  color: white;
+}
+
+.high-contrast .cards-container .card {
+  background-color: #0b223d;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 25px;
+  text-align: center;
+}
+
+.high-contrast .card a {
+  color: #ffffff;
+}
+
+body .footer {
+  background-color:rgba(182, 139, 79, 0.45); /* Color de fondo */
+  padding: 20px;
+  border-top: 3px solid #f9f9f9; /* Borde superior */
+  color: #000000;
+}
+
+.high-contrast .footer {
+  background-color:#0b223d; /* Color de fondo */
+  padding: 20px;
+  border-top: 3px solid #000000; /* Borde superior */
+}
+.high-contrast .footer .footer-container .footer-section h4{
+  color: #f3e0c4; 
+}
+
+.high-contrast .footer .footer-container .footer-section p, .high-contrast .footer .footer-container .social a{
+
+  color: rgb(255, 255, 255);
+}
+/* Estilos generales para la geolocalización */
+
+.high-contrast .container-principal {
+  background-color: #000000; 
+}
+.high-contrast .container-principal h2{
+  color:antiquewhite;
+}
+.high-contrast .container-principal h4{
+  color:antiquewhite;
+}
+.high-contrast .container-principal h5{
+  color:antiquewhite;
+}
+.high-contrast .container-principal .formulario-cliente .formulario label
+{
+  color: antiquewhite;
+  
+}
+.high-contrast .container-principal .formulario-cliente .formulario input{
+  background-color: #76a4d8;
+}

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container my-5">
+    <h2 class="title">🌐 Buscador Lexus</h2>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  
+    <form (submit)="handleFormSubmission(); $event.preventDefault();">
+      <div class="mb-3">
+        <label for="searchInput" class="text">{{'buscador.word' |translate }}</label>
+        <input
+          id="searchInput"
+          type="text"
+          class="form-control"
+          placeholder="Ejemplo: Actividades en Santa Marta"
+          [value]="searchTerm"
+          (input)="handleInputChange($event)"
+        />
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="isLoading">
+        <span *ngIf="isLoading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        {{ isLoading ? 'Procesando...' : '🔎 Buscar y Procesar' }}
+      </button>
+    </form>
+  
+    <section class="mt-5" *ngIf="scrapedData.length > 0">
+        <h4>{{'buscador.resultados' |translate }}</h4>
+        <div *ngFor="let item of scrapedData; let i = index" class="mt-4">
+          <h5 class="url">🔗 {{ item.url }}</h5>
+          <div *ngIf="item.error" class="alert alert-warning">Error al procesar: {{ item.error }}</div>
+      
+          <div class="grid-container">
+            <div *ngFor="let match of item.matches; let j = index" class="grid-item">
+              <div *ngIf="!item.error" class="card shadow-sm">
+                <div class="card-body">
+                  <p class="textos">{{ match.text }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+  </div>
+  

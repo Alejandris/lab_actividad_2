@@ -6,8 +6,12 @@ import { OffersComponent } from '../pages/offers/offers.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { LoginComponent } from '../components/login/login.component';
 import { RoomsComponent } from '../pages/admin/rooms/rooms.component';
-import { RoomslistComponent } from '../pages/roomslist/roomslist.component';
 import { RestaurantsComponent } from '../pages/restaurants/restaurants.component';
+import { RoomslistComponent } from '../pages/client/roomslist/roomslist.component';
+import { BuscadorComponent } from '../pages/client/buscador/buscador.component';
+import { GeolocalizacionComponent } from '../pages/client/geolocalizacion/geolocalizacion.component';
+import { GeolocalizaciionadminComponent } from '../pages/admin/geolocalizaciionadmin/geolocalizaciionadmin.component';
+
 
 
 
@@ -19,8 +23,16 @@ export const appRoutes: Routes = [
   { path: 'Restaurants', component: RestaurantsComponent },
   { path: 'Activities', component: ActivitiesComponent },
   {path: 'register', component: RegisterComponent},
+
+
+
+
+  
   {path: 'login', component: LoginComponent},
   {path: 'rooms', component: RoomsComponent},
   {path: 'roomslist', component: RoomslistComponent},
+  {path: 'scrape', component: BuscadorComponent},
+  {path: 'ubications', component: GeolocalizacionComponent},
+  {path: 'ubicationsadmin', component: GeolocalizaciionadminComponent},
   { path: '**', redirectTo: 'Home' }
 ];

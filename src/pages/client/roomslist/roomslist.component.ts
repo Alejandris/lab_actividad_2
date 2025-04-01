@@ -1,9 +1,12 @@
 import { NgFor, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RoomserService } from '../../service/roomser.service';
-import { HeaderComponent } from '../../components/header/header.component';
-import { ChatbotService } from '../../service/chatbot.service';
+
+
+
+import { RoomserService } from '../../../service/roomser.service';
+import { ChatbotService } from '../../../service/chatbot.service';
+import { HeaderComponent } from '../../../components/header/header.component';
 
 
 @Component({

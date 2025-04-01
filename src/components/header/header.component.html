@@ -1,3 +1,4 @@
+
 <div class="header">
     <h1 class="logo">LEXUS</h1>
     <div>
@@ -16,8 +17,6 @@
             <!-- header.component.html -->
             <button (click)="onRegisterClick()">{{'list.register' | translate}}</button>
             <button (click)="onLoginClick()">{{'list.login' | translate }}</button>
-
-           
           </div>
         </div>
         
@@ -26,13 +25,16 @@
               <option *ngFor="let option of options" [value]="option.value">{{ option.display}}</option>
           </select>
       </div>
+      
     </div>
-
+    
   
   <nav class="menu">
-    <a href="#">{{ 'menu.activities' | translate }}</a>
-    <a routerLink="/roomslist">{{ 'menu.rooms' | translate }}</a>
-    <a href="#">{{ 'menu.events' | translate }}</a>
-    <a href="#">{{ 'menu.offers' | translate }}</a>
-    <a href="#">{{ 'menu.restaurants' | translate }}</a>
+    <a class="ah" href="#">{{ 'menu.activities' | translate }}</a>
+    <a class="ah" routerLink="/roomslist">{{ 'menu.rooms' | translate }}</a>
+    <a class="ah" routerLink="/scrape">{{ 'menu.search' | translate }}</a>
+    <a class="ah" routerLink="/clientes">{{ 'menu.ubic' | translate }}</a>
+    <a class="ah" href="#">{{ 'menu.restaurants' | translate }}</a>
+    <a class="ah" href="#">{{ 'menu.spa' | translate }}</a>
   </nav>
+<router-outlet></router-outlet>

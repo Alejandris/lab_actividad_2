@@ -9,8 +9,8 @@
     "menu.activities": "Activities",
     "menu.rooms": "All Rooms",
     "menu.popular": "Popular",
-    "menu.events": "Events",
-    "menu.offers": "Offers",
+    "menu.search": "Search",
+    "menu.ubic": "Ubications",
     "menu.restaurants": "Restaurants",
     "cards.grand_hall": "Grand Hall",
     "cards.restaurants": "Restaurants",
@@ -63,6 +63,8 @@
     "agua_rio": "Agua de Río Café Bistró",
     "little_ouzo": "Little Ouzo",
     "ouzo": "Ouzo Restaurant",
-    "casa_magdalena": "Casa Magdalena"
+    "casa_magdalena": "Casa Magdalena",
+    "buscador.word":"Enter a keyword",
+    "buscador.resultados":"Search results"
 }
   
