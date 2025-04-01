@@ -1,0 +1,71 @@
+<app-header 
+  (registerClicked)="openModal()" 
+  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
+</app-header>
+<app-register [isModalVisible]="isModalVisible"></app-register>
+<app-login [isModalVisible]="isLoginModalVisible"></app-login>
+
+<div class="breadcrumb">
+  <a href="#">{{ 'home' | translate }}</a> <span>❮</span> <span>{{ 'restaurants' | translate }}</span>
+</div>
+
+<div class="restaurants-container">
+
+  <div class="restaurant">
+    <img src="../../assets/img/r.png" alt="{{ 'porthos' | translate }}">
+    <h3>{{ 'porthos' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante2.png" alt="{{ 'marrakech' | translate }}">
+    <h3>{{ 'marrakech' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante3.png" alt="{{ 'bohemian_brd' | translate }}">
+    <h3>{{ 'bohemian_brd' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante4.png" alt="{{ 'lulo' | translate }}">
+    <h3>{{ 'lulo' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante5.png" alt="{{ 'lamart' | translate }}">
+    <h3>{{ 'lamart' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante6.png" alt="{{ 'agua_rio' | translate }}">
+    <h3>{{ 'agua_rio' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante7.png" alt="{{ 'little_ouzo' | translate }}">
+    <h3>{{ 'little_ouzo' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante8.png" alt="{{ 'ouzo' | translate }}">
+    <h3>{{ 'ouzo' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="restaurant">
+    <img src="../../assets/img/restaurante9.png" alt="{{ 'casa_magdalena' | translate }}">
+    <h3>{{ 'casa_magdalena' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

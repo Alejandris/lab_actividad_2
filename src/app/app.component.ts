@@ -18,7 +18,7 @@ export class AppComponent {
   title = 'frontend';
 
   constructor(private router: Router) {
-    this.router.navigate(['/roomslist']);
+    this.router.navigate(['/Restaurants']);
   }
   
 }

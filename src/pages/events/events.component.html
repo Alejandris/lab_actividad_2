@@ -1,0 +1,31 @@
+<app-header 
+  (registerClicked)="openModal()" 
+  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
+</app-header>
+<app-register [isModalVisible]="isModalVisible"></app-register>
+<app-login [isModalVisible]="isLoginModalVisible"></app-login>
+<div class="breadcrumb">
+  <a href="#">{{ 'home' | translate }}</a> <span>></span> <span>{{ 'events' | translate }}</span>
+</div>
+
+<div class="event-container">
+  <div class="event">
+      <img src="/assets/img/event1.jpg" alt="{{ 'night_white' | translate }}" class="event-image">
+      <div class="event-card">
+          <h2>{{ 'night_white' | translate }}</h2>
+          <p>{{ 'night_white_desc' | translate }}</p>
+          <a href="#">{{ 'see_more' | translate }}</a>
+      </div>
+  </div>
+
+  <div class="event">
+      <div class="event-card">
+          <h2>{{ 'family_cinema' | translate }}</h2>
+          <p>{{ 'family_cinema_desc' | translate }}</p>
+          <a href="#">{{ 'see_more' | translate }}</a>
+      </div>
+      <img src="../../assets/img/event2.jpg" alt="{{ 'family_cinema' | translate }}" class="event-image">
+  </div>
+</div>
+
+<app-footer></app-footer>

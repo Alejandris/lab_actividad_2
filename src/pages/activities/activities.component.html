@@ -1,0 +1,69 @@
+<app-header 
+  (registerClicked)="openModal()" 
+  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
+</app-header>
+<app-register [isModalVisible]="isModalVisible"></app-register>
+<app-login [isModalVisible]="isLoginModalVisible"></app-login>
+<div class="breadcrumb">
+  <a href="#">{{ 'home' | translate }}</a> <span>></span> <span>{{ 'activities' | translate }}</span>
+</div>
+
+<div class="activities-container">
+
+  <div class="activity">
+    <img src="../../assets/img/delfines.jpg" alt="{{ 'swim_dolphins' | translate }}">
+    <h3>{{ 'swim_dolphins' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/tayrona.jpg" alt="{{ 'tayrona_park' | translate }}">
+    <h3>{{ 'tayrona_park' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/buceo.jpg" alt="{{ 'diving' | translate }}">
+    <h3>{{ 'diving' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/rodadero.jpg" alt="{{ 'rodadero' | translate }}">
+    <h3>{{ 'rodadero' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/cristal.jpg" alt="{{ 'cristal_beach' | translate }}">
+    <h3>{{ 'cristal_beach' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/flyboard.jpg" alt="{{ 'flyboard' | translate }}">
+    <h3>{{ 'flyboard' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/catedral.jpg" alt="{{ 'cathedral' | translate }}">
+    <h3>{{ 'cathedral' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/tagua.jpg" alt="{{ 'tagua' | translate }}">
+    <h3>{{ 'tagua' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+  <div class="activity">
+    <img src="../../assets/img/trekking.jpg" alt="{{ 'trekking' | translate }}">
+    <h3>{{ 'trekking' | translate }}</h3>
+    <a href="#">{{ 'see_more' | translate }}</a>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

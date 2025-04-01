@@ -1,0 +1,68 @@
+
+.breadcrumb {
+  font-size: 18px;
+  margin: 10px 20px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+
+.event-image {
+  width: 50%;  /* Hace que la imagen ocupe el mismo ancho que el texto */
+  height: 250px; /* Ajusta el alto de todas las imágenes */
+  object-fit: cover; /* Mantiene la proporción sin distorsionar */
+  border-radius: 10px;
+  border: 3px solid ;
+}
+
+.event-card {
+  width: 50%;
+  height: 250px; /* Igualamos el alto del contenedor al de la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  background: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+.event-card a {
+  display: block;
+  color: blue;
+  text-decoration: none;
+  margin-top: 10px;
+}

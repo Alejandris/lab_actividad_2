@@ -1,0 +1,67 @@
+
+.breadcrumb {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .breadcrumb span {
+    margin: 0 5px;
+  }
+  
+  .offers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .offer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .offer-text {
+    width: 60%;
+    color: #00134d;
+  }
+  
+  .offer-text h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00134d;
+  }
+  
+  .offer-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .offer-text a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .offer-image {
+    width: 30%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #00134d;
+  }
+  
+  .discount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
