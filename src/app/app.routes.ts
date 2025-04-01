@@ -15,6 +15,11 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },  
   { path: 'Home', component: HomeComponent },
   {path: 'register', component: RegisterComponent},
+
+
+
+
+  
   {path: 'login', component: LoginComponent},
   {path: 'rooms', component: RoomsComponent},
   {path: 'roomslist', component: RoomslistComponent},
