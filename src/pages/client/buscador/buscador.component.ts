@@ -3,10 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {  ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from "../../../components/header/header.component";
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../service/languageService';
 
 @Component({
   selector: 'app-buscador',
-  imports: [NgFor, NgIf, ReactiveFormsModule, HeaderComponent],
+  imports: [NgFor, NgIf, ReactiveFormsModule, HeaderComponent, TranslateModule],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css',
   standalone: true,
@@ -18,7 +20,13 @@ export class BuscadorComponent {
   isLoading: boolean = false; // Indica si la solicitud está procesando
   errorMessage: string = ''; // Mensaje de error
 
-  constructor(private http: HttpClient) {}
+  
+  constructor(private http: HttpClient, private languageService: LanguageService) {}
+ 
+  onChange(event: Event) {
+    const lang = (event.target as HTMLSelectElement).value;
+    this.languageService.setLanguage(lang);
+  }
 
   handleInputChange(event: Event): void {
     const inputElement = event.target as HTMLInputElement;

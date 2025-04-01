@@ -1,0 +1,103 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    color: azure;
+    font-size: 18px;
+}
+.container_pricipal{
+    height: 100vh;
+    width: 100vh;
+}
+.container-lista-clientes{
+    background-color: #d1bcab;
+    height: 100vh;
+    width: 100vh;
+    color: #111111;
+}
+.list-group{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.2%;
+    height: 70%;
+    overflow-y: scroll;
+    background-color: #dbc5b4e5;
+    border-radius: 5px;
+    color: #111111;
+}
+
+.formulario-cliente {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas, cada una con el mismo tamaño */
+    gap: 1px; /* Espacio entre las columnas */
+    align-items: start; /* Alinea los elementos al inicio */
+    width: 95%;
+    padding-left: 5%;
+}
+
+.formulario-cliente .map {
+    width: 100%; /* El mapa debe ocupar todo el ancho de la columna */
+    height: 400px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    background-color: #e2d0bd;
+    border-radius: 5px;
+}
+.formulario-cliente .formulario {
+    width: 100%; /* El mapa debe ocupar todo el ancho de la columna */
+    height: 600px;
+    margin: 5px auto;
+    align-items: center;
+    padding-left: 10%;
+
+}
+.formulario-cliente input {
+    padding: 10px;
+    width: 80%; /* Esto asegura que todos los inputs tengan el mismo tamaño */
+    background-color: #197ef191;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    
+}
+
+.formulario-cliente label {
+    font-size: 1.2em;
+    color: #111111;
+    margin: 5px 0;
+    width: 100%;
+    display: inline-block;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #111111;
+}
+h4{
+    text-align: left;
+    padding-left: 30%;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #111111;
+}
+h5{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #111111;
+}
+.btn-save{
+    background-color:#e2d0bd;
+    padding: 1%;
+    width: 15%;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 1em;
+}
+strong, p{
+    text-align: center;
+    font-size: 1.2em;
+    color: #111111;
+}

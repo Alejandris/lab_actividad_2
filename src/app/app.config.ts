@@ -14,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AccesibilityComponent } from '../components/accesibility/accesibility.component';
 
 // Función para cargar las traducciones
 export function HttpLoaderFactory(http: HttpClient) {
@@ -46,6 +47,7 @@ export const appConfig: ApplicationConfig = {
       ReactiveFormsModule,
       AngularFireDatabase,
       AngularFireAuth,
+      AccesibilityComponent,
 
       TranslateModule.forRoot({
         loader: {

@@ -10,7 +10,7 @@
     "menu.rooms": "All Rooms",
     "menu.popular": "Popular",
     "menu.search": "Search",
-    "menu.offers": "Offers",
+    "menu.ubic": "Ubications",
     "menu.restaurants": "Restaurants",
     "cards.grand_hall": "Grand Hall",
     "cards.restaurants": "Restaurants",
@@ -29,6 +29,8 @@
     "footer.loyalty_program": "Loyalty Program",
     "footer.conference_hall": "Conference Hall",
     "footer.terms": "Terms and Conditions",
-    "footer.privacy": "Privacy and Cookies"
+    "footer.privacy": "Privacy and Cookies",
+    "buscador.word":"Enter a keyword",
+    "buscador.resultados":"Search results"
 }
   

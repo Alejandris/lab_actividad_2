@@ -6,7 +6,7 @@
   
     <form (submit)="handleFormSubmission(); $event.preventDefault();">
       <div class="mb-3">
-        <label for="searchInput" class="text">Introduce una Palabra Clave</label>
+        <label for="searchInput" class="text">{{'buscador.word' |translate }}</label>
         <input
           id="searchInput"
           type="text"
@@ -23,7 +23,7 @@
     </form>
   
     <section class="mt-5" *ngIf="scrapedData.length > 0">
-        <h4>📋 Resultados</h4>
+        <h4>{{'buscador.resultados' |translate }}</h4>
         <div *ngFor="let item of scrapedData; let i = index" class="mt-4">
           <h5 class="url">🔗 {{ item.url }}</h5>
           <div *ngIf="item.error" class="alert alert-warning">Error al procesar: {{ item.error }}</div>

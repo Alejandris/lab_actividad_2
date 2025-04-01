@@ -11,7 +11,7 @@
     "menu.favorites": "Mis favoritos",
     "menu.popular": "Populares",
     "menu.search": "Buscar",
-    "menu.offers": "Ofertas",
+    "menu.ubic": "Ubicaciones",
     "menu.restaurants": "Restaurantes",
     "cards.grand_hall": "Gran Salón",
     "cards.restaurants": "Restaurantes",
@@ -30,5 +30,7 @@
     "footer.loyalty_program": "Programa de Fidelización",
     "footer.conference_hall": "Salón de Conferencias",
     "footer.terms": "Términos y Condiciones",
-    "footer.privacy": "Privacidad y Cookies"
+    "footer.privacy": "Privacidad y Cookies",
+    "buscador.word":"Ingresa una palabra clave",
+    "buscador.resultados":"Resultados de búsqueda"
 }

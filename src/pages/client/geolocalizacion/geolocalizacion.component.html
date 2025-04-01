@@ -1,0 +1,18 @@
+<body>
+  <router-outlet></router-outlet>
+  <app-header></app-header>
+<div class="container-principal">
+  <div>
+    <h2 class="mt-4">Lista de Clientes</h2>
+    <ul class="list-group">
+      <li *ngFor="let cliente of clientes" class="list-group-item">
+        <strong>{{ cliente.razonSocial }}</strong> - {{ cliente.direccion }}  
+        <p>Latitud: {{ cliente?.ubicacion?.[0] }}</p>
+        <p>Longitud: {{ cliente?.ubicacion?.[1] }}</p>
+        <img *ngIf="cliente.imagen" [src]="cliente.imagen" alt="Imagen del cliente" class="img-thumbnail" style="width: 100px; height: 100px;" />
+        
+      </li>
+    </ul>
+    </div>
+  </div>
+</body>

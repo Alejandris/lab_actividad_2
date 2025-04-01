@@ -5,6 +5,8 @@ import { LoginComponent } from '../components/login/login.component';
 import { RoomsComponent } from '../pages/admin/rooms/rooms.component';
 import { RoomslistComponent } from '../pages/client/roomslist/roomslist.component';
 import { BuscadorComponent } from '../pages/client/buscador/buscador.component';
+import { GeolocalizacionComponent } from '../pages/client/geolocalizacion/geolocalizacion.component';
+import { GeolocalizaciionadminComponent } from '../pages/admin/geolocalizaciionadmin/geolocalizaciionadmin.component';
 
 
 
@@ -17,5 +19,7 @@ export const appRoutes: Routes = [
   {path: 'rooms', component: RoomsComponent},
   {path: 'roomslist', component: RoomslistComponent},
   {path: 'scrape', component: BuscadorComponent},
+  {path: 'ubications', component: GeolocalizacionComponent},
+  {path: 'ubicationsadmin', component: GeolocalizaciionadminComponent},
   { path: '**', redirectTo: 'Home' }
 ];
