@@ -6,10 +6,11 @@ import { RegisterComponent } from '../../components/register/register.component'
 import { LoginComponent } from "../../components/login/login.component";
 import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
 import { LanguageService } from '../../service/languageService';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-restaurants',
-  imports: [HeaderComponent, FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
+  imports: [RegisterComponent, LoginComponent, TranslateModule,FooterComponent],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.css',
   standalone: true,
@@ -20,13 +21,13 @@ export class RestaurantsComponent {
   isLoginModalVisible: boolean = false;
   currentLang: string = 'es';
 
-  // Método que se llama cuando el header emite el evento de "registrarse"
   openModal() {
     this.isModalVisible = true;
   }
   openLoginModal() {
     this.isLoginModalVisible = true;
   }
+
 
   constructor(public languageService: LanguageService) { }
 

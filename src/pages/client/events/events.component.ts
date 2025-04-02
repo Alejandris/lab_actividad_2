@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { RegisterComponent } from '../../components/register/register.component';
-import { LoginComponent } from "../../components/login/login.component";
+import { HeaderComponent } from '../../../components/header/header.component';
+import { FooterComponent } from '../../../components/footer/footer.component';
+import { RegisterComponent } from '../../../components/register/register.component';
+import { LoginComponent } from "../../../components/login/login.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { LanguageService } from '../../service/languageService';
+import { LanguageService } from '../../../service/languageService';
 
 @Component({
   selector: 'app-events',
-  imports: [HeaderComponent, FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
+  imports: [RegisterComponent, LoginComponent, TranslateModule, FooterComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css',
   standalone: true,

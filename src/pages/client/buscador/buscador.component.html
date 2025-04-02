@@ -1,11 +1,11 @@
-<app-header></app-header>
+
 <div class="container my-5">
     <h2 class="title">🌐 Buscador Lexus</h2>
   
     <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
   
     <form (submit)="handleFormSubmission(); $event.preventDefault();">
-      <div class="mb-3">
+      <div class="box">
         <label for="searchInput" class="text">{{'buscador.word' |translate }}</label>
         <input
           id="searchInput"
@@ -42,4 +42,5 @@
       
       
   </div>
+  <app-footer></app-footer>
   

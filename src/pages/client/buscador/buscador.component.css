@@ -3,6 +3,7 @@ form {
     background-color: #cab897;
     border-radius: 8px;
     padding: 2rem;
+    margin: 2%;
   }
 .title{
     font-size: 2rem;
@@ -15,11 +16,12 @@ form {
     font-weight: bold;
     padding-bottom: 3%;
 }
+  
   /* Estilo de los campos de entrada */
   input[type="text"],
   input[type="number"],
   select {
-    width: 100%;
+    width: 98%;
     padding: 0.5rem;
     margin: 15px 0 15px 0;  
     border-radius: 4px;

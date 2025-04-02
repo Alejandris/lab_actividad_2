@@ -1,6 +1,4 @@
 <body>
-  <router-outlet></router-outlet>
-  <app-header></app-header>
 <div class="container-principal">
   <div>
     <h2 class="mt-4">Lista de Clientes</h2>
@@ -14,5 +12,8 @@
       </li>
     </ul>
     </div>
+    <app-mapa [lugaresGuardados]="clientes"></app-mapa>
+
   </div>
 </body>
+<app-footer></app-footer>

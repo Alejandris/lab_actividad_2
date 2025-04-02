@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+import { HeaderComponent } from '../../../components/header/header.component';
+import { FooterComponent } from '../../../components/footer/footer.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RegisterComponent } from '../../components/register/register.component';
-import { LoginComponent } from "../../components/login/login.component";
+import { RegisterComponent } from '../../../components/register/register.component';
+import { LoginComponent } from "../../../components/login/login.component";
 import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
-import { LanguageService } from '../../service/languageService';
+import { LanguageService } from '../../../service/languageService';
+import { AccessibilityService } from '../../../service/accesibility.service';
+import { Router } from '@angular/router';
+import { UserService } from '../../../service/user.service';
 
 @Component({
   selector: 'app-activities',
-  imports: [HeaderComponent, FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
+  imports: [RegisterComponent, LoginComponent, TranslateModule, FooterComponent],
   templateUrl: './activities.component.html',
   styleUrl: './activities.component.css',
   standalone: true,
@@ -27,11 +30,13 @@ export class ActivitiesComponent {
   openLoginModal() {
     this.isLoginModalVisible = true;
   }
-
-  constructor(public languageService: LanguageService) { }
-
   onChange(event: Event) {
     const lang = (event.target as HTMLSelectElement).value;
     this.languageService.setLanguage(lang);
   }
+  constructor(private accessibilityService: AccessibilityService, private router: Router, private userService: UserService, public languageService: LanguageService ) {
+
+  }
+
+  
 }

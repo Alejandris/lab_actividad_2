@@ -1,7 +1,7 @@
 
 <div class="header">
     <h1 class="logo">LEXUS</h1>
-    <div>
+    <div class="hero-container">
           <div class="hero">
             <h2 class="title2"> {{'title2' | translate}}</h2>
             <div class="search-bar">
@@ -11,9 +11,9 @@
               <button>{{ 'search.button' | translate }}</button>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="user">
+    </div>
+        <div  class="user">
+          <div >
             <!-- header.component.html -->
             <button (click)="onRegisterClick()">{{'list.register' | translate}}</button>
             <button (click)="onLoginClick()">{{'list.login' | translate }}</button>
@@ -24,17 +24,18 @@
           <select (change)="onChange($event)">
               <option *ngFor="let option of options" [value]="option.value">{{ option.display}}</option>
           </select>
-      </div>
+        </div>  
       
-    </div>
-    
-  
+    </div> 
+<div class="container-menu">
   <nav class="menu">
-    <a class="ah" href="#">{{ 'menu.activities' | translate }}</a>
-    <a class="ah" routerLink="/roomslist">{{ 'menu.rooms' | translate }}</a>
-    <a class="ah" routerLink="/scrape">{{ 'menu.search' | translate }}</a>
-    <a class="ah" routerLink="/clientes">{{ 'menu.ubic' | translate }}</a>
-    <a class="ah" href="#">{{ 'menu.restaurants' | translate }}</a>
-    <a class="ah" href="#">{{ 'menu.spa' | translate }}</a>
+      <a class="ah" routerLink="/Activities">{{ 'menu.activities' | translate }}</a>
+      <a class="ah" routerLink="/roomslist">{{ 'menu.rooms' | translate }}</a>
+      <a class="ah" routerLink="/scrape">{{ 'menu.search' | translate }}</a>
+      <a class="ah" routerLink="/ubications">{{ 'menu.ubic' | translate }}</a>
+      <a class="ah" routerLink="/Restaurants">{{ 'menu.restaurants' | translate }}</a>
+      <a class="ah" routerLink="/Events">{{ 'menu.events' | translate }}</a>
+      <a class="ah" routerLink="/Offers">{{ 'menu.offers' | translate }}</a>
   </nav>
+</div>  
 <router-outlet></router-outlet>

@@ -5,10 +5,16 @@ import {  ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from "../../../components/header/header.component";
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../../service/languageService';
+import { AccessibilityService } from '../../../service/accesibility.service';
+import { Router } from '@angular/router';
+import { UserService } from '../../../service/user.service';
+import { LoginComponent } from '../../../components/login/login.component';
+import { RegisterComponent } from '../../../components/register/register.component';
+import { FooterComponent } from "../../../components/footer/footer.component";
 
 @Component({
   selector: 'app-buscador',
-  imports: [NgFor, NgIf, ReactiveFormsModule, HeaderComponent, TranslateModule],
+  imports: [NgFor, NgIf, ReactiveFormsModule, TranslateModule, FooterComponent],
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.css',
   standalone: true,
@@ -20,9 +26,21 @@ export class BuscadorComponent {
   isLoading: boolean = false; // Indica si la solicitud está procesando
   errorMessage: string = ''; // Mensaje de error
 
-  
-  constructor(private http: HttpClient, private languageService: LanguageService) {}
+  isModalVisible: boolean = false;
+  isLoginModalVisible: boolean = false;
+  currentLang : string = 'es';
+  constructor(private accessibilityService: AccessibilityService, private router: Router, private userService: UserService, public languageService: LanguageService, private http: HttpClient) {
+    // Inicializar el servicio de idioma
+    this.languageService.setLanguage(this.currentLang);
+
+  }
  
+  openModal() {
+    this.isModalVisible = true;
+  }
+  openLoginModal() {
+    this.isLoginModalVisible = true;
+  }
   onChange(event: Event) {
     const lang = (event.target as HTMLSelectElement).value;
     this.languageService.setLanguage(lang);
