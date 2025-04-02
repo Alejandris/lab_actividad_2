@@ -6,6 +6,7 @@ import { OffersComponent } from '../pages/client/offers/offers.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { LoginComponent } from '../components/login/login.component';
 import { RoomsComponent } from '../pages/admin/rooms/rooms.component';
+import { RestaurantsComponent } from '../pages/restaurants/restaurants.component';
 import { RoomslistComponent } from '../pages/client/roomslist/roomslist.component';
 import { BuscadorComponent } from '../pages/client/buscador/buscador.component';
 import { GeolocalizacionComponent } from '../pages/client/geolocalizacion/geolocalizacion.component';
@@ -19,6 +20,10 @@ export const routes :Routes =[
   { path: '', redirectTo: '/Home', pathMatch: 'full' } ,
   { path: '', component: HomeComponent },  
   { path: 'Home', component: HomeComponent },
+  { path: 'Events', component: EventsComponent },
+  { path: 'Offers', component: OffersComponent },
+  { path: 'Restaurants', component: RestaurantsComponent },
+  { path: 'Activities', component: ActivitiesComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'events', component: EventsComponent},
   {path: 'activities', component: ActivitiesComponent},
