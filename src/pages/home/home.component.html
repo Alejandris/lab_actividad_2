@@ -1,7 +1,4 @@
-<app-header 
-  (registerClicked)="openModal()" 
-  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
-</app-header>
+
 <app-register [isModalVisible]="isModalVisible"></app-register>
 <app-login [isModalVisible]="isLoginModalVisible"></app-login>
 <div class="cards-container">
@@ -43,4 +40,5 @@
   
 
   </div>
+
 <app-footer></app-footer>

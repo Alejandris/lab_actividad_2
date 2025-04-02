@@ -5,13 +5,18 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { AccesibilityComponent } from "../components/accesibility/accesibility.component";
 import { AccessibilityService } from '../service/accesibility.service';
 import { Subscription } from 'rxjs';
-import { Title } from '@angular/platform-browser';
-import { appRoutes } from './app.routes';
+
+import { RegisterComponent } from '../components/register/register.component';
+import { LoginComponent } from '../components/login/login.component';
+import { UserService } from '../service/user.service';
+import { LanguageService } from '../service/languageService';
+import { HeaderAdminComponent } from '../components/header-admin/header-admin.component';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AccesibilityComponent, RouterModule],
+  imports: [RouterOutlet, AccesibilityComponent, RouterModule, HeaderComponent,RegisterComponent, LoginComponent, HeaderAdminComponent, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true
@@ -23,11 +28,27 @@ export class AppComponent {
   
   private contrastSubscription!: Subscription;
   private fontSizeSubscription!: Subscription;
+  isModalVisible: boolean = false;
+  isLoginModalVisible: boolean = false;
+  currentLang: string = 'es';
   title = "frontend";
-  constructor(private accessibilityService: AccessibilityService, private router: Router) {
-
+  isAdminPage = false;
+  constructor(private accessibilityService: AccessibilityService, private router: Router, private userService: UserService, public languageService: LanguageService ) {
+    this.router.events.subscribe(() => {
+      this.isAdminPage = this.router.url.startsWith('/admin'); // Detecta si es admin
+    });
   }
-
+  
+  openModal() {
+    this.isModalVisible = true;
+  }
+  openLoginModal() {
+    this.isLoginModalVisible = true;
+  }
+  onChange(event: Event) {
+    const lang = (event.target as HTMLSelectElement).value;
+    this.languageService.setLanguage(lang);
+  }
   ngOnInit() {
     // Suscribirse al cambio de contraste
     this.contrastSubscription = this.accessibilityService.isHighContrast$.subscribe(
@@ -79,5 +100,6 @@ export class AppComponent {
       this.fontSizeSubscription.unsubscribe();
     }
   }
-    
+ 
+
 }

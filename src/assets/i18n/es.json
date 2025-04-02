@@ -13,6 +13,8 @@
     "menu.search": "Buscar",
     "menu.ubic": "Ubicaciones",
     "menu.restaurants": "Restaurantes",
+    "menu.offers": "Ofertas",
+    "menu.events": "Eventos",
     "cards.grand_hall": "Gran Salón",
     "cards.restaurants": "Restaurantes",
     "cards.presidential_suite": "Suite Presidencial",
@@ -31,6 +33,8 @@
     "footer.conference_hall": "Salón de Conferencias",
     "footer.terms": "Términos y Condiciones",
     "footer.privacy": "Privacidad y Cookies",
+    "buscador.word":"Ingresa la palabra clave",
+    "buscador.resultados":"Resultados de la Busqueda",
     "buscador.word":"Ingresa una palabra clave",
     "buscador.resultados":"Resultados de búsqueda"
 }
