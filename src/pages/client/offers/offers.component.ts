@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+import { HeaderComponent } from '../../../components/header/header.component';
+import { FooterComponent } from '../../../components/footer/footer.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RegisterComponent } from '../../components/register/register.component';
-import { LoginComponent } from "../../components/login/login.component";
+import { RegisterComponent } from '../../../components/register/register.component';
+import { LoginComponent } from "../../../components/login/login.component";
 import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
-import { LanguageService } from '../../service/languageService';
+import { LanguageService } from '../../../service/languageService';
 
 @Component({
   selector: 'app-offers',
-  imports: [HeaderComponent, FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
+  imports: [TranslateModule, FooterComponent],
   templateUrl: './offers.component.html',
   styleUrl: './offers.component.css',
   standalone: true,

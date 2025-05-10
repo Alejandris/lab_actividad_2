@@ -1,10 +1,6 @@
-<app-header 
-  (registerClicked)="openModal()" 
-  (loginClicked)="openLoginModal()"> <!-- Escuchamos los eventos para abrir el modal de login o registro -->
-</app-header>
+
 <app-register [isModalVisible]="isModalVisible"></app-register>
 <app-login [isModalVisible]="isLoginModalVisible"></app-login>
-
 <div class="breadcrumb">
   <a href="#">{{ 'home' | translate }}</a> <span>❮</span> <span>{{ 'restaurants' | translate }}</span>
 </div>
@@ -66,6 +62,4 @@
   </div>
 
 </div>
-
-
 <app-footer></app-footer>

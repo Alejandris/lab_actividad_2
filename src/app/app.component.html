@@ -1,3 +1,10 @@
-
+<app-header-admin *ngIf="isAdminPage"></app-header-admin>
+<app-header *ngIf="!isAdminPage" 
+(registerClicked)="openModal()" 
+(loginClicked)="openLoginModal()">
+</app-header>
+<app-register *ngIf="!isAdminPage" [isModalVisible]="isModalVisible"></app-register>
+<app-login *ngIf="!isAdminPage" [isModalVisible]="isLoginModalVisible"></app-login>
+<app-accesibility *ngIf="!isAdminPage"></app-accesibility>
 <router-outlet></router-outlet>
 

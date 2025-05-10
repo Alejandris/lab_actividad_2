@@ -1,0 +1,30 @@
+/* Estilo para los controles flotantes */
+.accessibility-controls {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 15px;
+    z-index: 1;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 25px;
+  }
+  
+  .accessibility-controls button {
+    background-color: #f3d4ae;
+    border: none;
+    cursor: pointer;
+    padding: 25%;
+    margin: 25%;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 30px;
+  }
+  
+  .accessibility-controls button:hover {
+    background-color: #000000;
+    color: white;
+  }
+ 

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Renderer2 } from '@angular/core';
 import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
 import { LanguageService } from '../../service/languageService';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule, RouterOutlet, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   standalone: true
@@ -25,7 +26,7 @@ export class HeaderComponent {
   }
   
   options: Array<{ value: string; display: string }> = [];
-
+  
   constructor(public languageService: LanguageService) { }
 
   ngOnInit() {
@@ -37,5 +38,8 @@ export class HeaderComponent {
     const lang = (event.target as HTMLSelectElement).value;
     this.languageService.setLanguage(lang); // Cambia el idioma globalmente
   }
+  
+
 }
+
 

@@ -9,7 +9,7 @@ import { LanguageService } from '../../service/languageService';
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
+  imports: [FooterComponent, RegisterComponent, LoginComponent, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   standalone: true,

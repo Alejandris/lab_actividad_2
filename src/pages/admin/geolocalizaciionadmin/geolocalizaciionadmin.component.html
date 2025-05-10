@@ -1,0 +1,70 @@
+<body>
+    <app-header-admin></app-header-admin>
+    <div>
+        <h2>Registro de Cliente</h2>
+    <form (submit)="guardarCliente($event)" class="formulario-cliente">
+     
+        <div class="formulario">
+          <h4> Formulario</h4>
+            <div class="mb-3">
+              <label for="razonSocial">Razon Social</label>
+              <input type="text" class="form-control" id="razonSocial" #razonSocial (input)="razonSocialValor = razonSocial.value" required />
+            </div>
+      
+            <div class="mb-3">
+              <label for="direccion">Dirección</label>
+              <input type="text" class="form-control" id="direccion" #direccion (input)="direccionValor = direccion.value" required />
+            </div>
+      
+            <div class="mb-3">
+                <label for="imagen">Imagen (opcional)</label>
+                <input type="file" class="form-control" id="imagen" accept="image/*" (change)="onFileSelect($event)" />
+            </div>
+        
+            <div class="mb-3">
+              <label for="latitud">Latitud</label>
+              <input type="number" class="form-control" id="latitud" #latitud (input)="latitudValor = latitud.value" step="any" />
+            </div>
+      
+            <div class="mb-3">
+              <label for="longitud">Longitud</label>
+              <input type="number" class="form-control" id="longitud" #longitud (input)="longitudValor = longitud.value" step="any" />
+            </div>
+            <button type="submit" class="btn-save">Guardar Cliente</button>
+      </div>
+      <div>
+          <div class="mapa">
+            <h5>Ubicación del cliente</h5>
+            <app-mapa (coordenadasSeleccionadas)="manejarSeleccionEnMapa($event)"></app-mapa>
+
+          </div>
+          <br>
+          <br>
+          <br>
+          
+      </div>
+      
+    </form>
+  
+  </div>
+  <div>
+    <body>
+     
+      <div class="container-principal">
+        <div>
+          <h2 class="mt-4">Lista de Clientes</h2>
+          <ul class="list-group">
+            <li *ngFor="let cliente of clientes" class="list-group-item">
+              <strong>{{ cliente.razonSocial }}</strong> - {{ cliente.direccion }}  
+              <p>Latitud: {{ cliente?.ubicacion?.[0] }}</p>
+              <p>Longitud: {{ cliente?.ubicacion?.[1] }}</p>
+              <img *ngIf="cliente.imagen" [src]="cliente.imagen" alt="Imagen del cliente" class="img-thumbnail" style="width: 100px; height: 100px;" />
+              
+            </li>
+          </ul>
+          </div>
+        </div>
+      </body>
+      
+  </div>
+</body>

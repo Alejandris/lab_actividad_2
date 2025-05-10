@@ -1,6 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,6 +13,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AccesibilityComponent } from '../components/accesibility/accesibility.component';
+import { routes } from './app.routes';
 
 // Función para cargar las traducciones
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,7 +26,7 @@ export const appConfig: ApplicationConfig = {
  
   providers: [
       provideZoneChangeDetection({ eventCoalescing: true }),
-      provideRouter(appRoutes),
+      provideRouter(routes),
 
       // Proveedores de Firebase y Auth
       provideAuth(() => getAuth()),
@@ -46,6 +47,7 @@ export const appConfig: ApplicationConfig = {
       ReactiveFormsModule,
       AngularFireDatabase,
       AngularFireAuth,
+      AccesibilityComponent,
 
       TranslateModule.forRoot({
         loader: {
